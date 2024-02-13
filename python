@@ -1,0 +1,542 @@
+1) Write a program to print the special characters separately and print number of Special characters and 
+spaces in the line?
+
+up = ""
+lo = ""
+sp = ""
+sc = ""
+s = [" "]
+ch = input("Enter the word: ")
+
+for i in ch:v
+    if (i.isupper()):
+        up += i
+    elif ( i.islower()):
+        lo += i
+    elif i in s:
+        sp += i
+    else:
+        sc += i
+
+x = len(sp)
+z = len(sc)
+
+print("Number of spaces:", x)
+print("Number of special characters:", z)=4
+print("Special characters:", sc)
+
+ 2) Write a program to print all the Non-Prime numbers between a and b?
+for i in range(5,28):
+  for j in range(2,i-1):
+     if(i%j==0):
+        print(i)
+        break;
+prime 
+
+for i in range(5,28):
+  c=0
+  for j in range(2,i-1):
+     if(i%j==0):
+         c=1
+  if c!=1:
+        print(i)
+        
+ 3) Write a program to print the multiplication table or Division table of number m up to n. Get the choice 
+from the user.(Multiplication - 1, Division – 2)
+
+m=int(input('enter'))
+n=int(input('enter'))
+choice=int(input('enter'))
+if choice==1:
+ for i in range(1,n+1):
+  print(f'{i}*{m}={m*i}')
+elif choice==2:
+ for i in range(1,n+1):
+    print(f'{i}/{m}={m/i}')
+4)Write a program to read the numbers until -1 is encountered. Find the average of positive numbers and 
+negative numbers entered by user.Restrict the decimal upto 2 digits
+
+lp=list()
+ln=list()
+print("Enter -1 to exit...")
+while(True):
+ s=input("Enter the number : ")
+ if((s.isnumeric())or(s.startswith("-"))):
+    n=int(s)
+    if(n==-1):
+       break
+    else:
+     if((n>0)and(n<100)):
+       lp.append(n)
+     elif((n<0)and(n>(-100))):
+       ln.append(n)
+     else:
+       pass
+if(lp!=[]):
+ sum_p=sum(lp)
+ len_p=len(lp)
+ avg_p=sum(lp)/len(lp)
+else:
+  avg_p=0
+if(ln!=[]):
+  sum_n=sum(ln)
+  len_n=len(ln)
+  avg_n=sum(ln)/len(ln)
+else:
+  avg_n=0
+print("The average of negative numbers : ",avg_n)
+print("The average of postive numbers : ",avg_p)
+
+ 5)Program to remove duplicates numbers entirely from the sorted array Sample Input:
+m=list(map(int, input("enter a list :").split()))
+t=[]
+for i in m:
+  if(m.count(i)==1):
+      t.append(i)
+print(t)
+
+ 6) Write a pr-+ogram to print n non composite numbers after nth Prime number
+
+a = 1
+b = 200
+c=[]
+h=int(input('enter '))
+for n in range(a, b):
+ sum=0
+ for i in range(2, n-1):
+  if n%i == 0:
+   sum = 1
+ if sum!=1:
+   c.append(n)
+g=c[h]
+k=c[h+1:2*h+1]
+print(g)
+print(k)
+
+ 10) Find the Mean, Median and Mode of the array of numbers? 
+
+import statistics
+m=list(map(int,input("Enter").split()))
+x=statistics.median(m)
+y=statistics.mean(m)
+z=statistics.mode(m)
+print(x)
+print(y)
+print(z)
+
+
+ 8)Write a program to print the Inverted Full Pyramid star pattern?
+
+row = int(input('Enter number of rows required: '))
+for i in range(row,0,-1):
+ for j in range(row-i):
+   print(' ', end='') 
+ 
+ for j in range(2*i-1):
+   print('*',end='')
+ print()
+
+ 9) Write a program to read a character until a * is encountered. Also count the number of --uppercase, 
+lowercase, Special characters and numbers entered by the users.
+
+p=0
+b=0
+k=0
+print("Enter * to exit...")
+while(True):
+  s=input("Enter : ")
+  if((s.isnumeric())or(s.startswith("-"))):
+    print('invalid')
+  else:
+    if(s=="*"):
+      break
+    else:
+     if(s.isupper()):
+      p=p+1
+     elif(s.islower()):
+      b=b+1
+     else:
+      k=k+1
+print('no of upper=',p)
+print('no of lower=',b)
+print('no of spcial=',k)
+
+11)Find the factorial of n? 
+
+a=input("value:")
+if(a.isnumeric()):
+    s=int(a)
+    f=1
+    for i in range(1,s+1):
+         f=f*i
+    print("factorial",f)
+else:
+    print("invalid")
+
+
+16) Write a program to calculate the factorial of number using recursive function.
+
+
+def f(n):
+   if n == 1:
+       return n
+   else:
+       return n*f(n-1)
+
+num =int(input())
+if num < 0:
+   print("Sorry, factorial does not exist for negtive numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   print("The factorial of", num, "is", f(num))
+
+
+ 20)Write a program to print number of factors and to print nth factor of the given number
+
+m=100
+n=4
+t=[]
+for i in range (1,m+1):
+    if(m%i==0):
+        t.append(i)
+print(len(t))
+print(t[n-1])
+print(t)
+
+22)Write a program to print unique permutations of a given number 
+
+from itertools import permutations
+words=[" ".join(p) for p in permutations("134")]
+for i in words:
+    print(i)
+
+24)python Program to Create a List of Tuples with the First Element as the Number and Second Element 
+as the Square of the Number
+
+t=[]
+for i in range (45,49+1):
+  c=(i,i*i)
+  t.append(c)
+print(t)
+ 
+ 25)Write a program to print the Fibonacci series. 
+
+n=int(input())
+a=0
+b=1
+c=0
+for i in range(n):
+    print(c,end=" ")
+    a=b
+    b=c
+    c=a+b
+    
+ 29)Python Program to Remove the Duplicate Items from a List Sample Input:
+
+m=list(map(int,input().split()))
+s=set(m)
+l=list(s)
+print(l)
+
+ 30) How to generate Negative Fibonacci series?
+n=int(input())
+a=0
+b=-1
+c=0
+for i in range(n):
+    print(c,end=" ")
+    a=b
+    b=c
+    c=a+b
+33)Find the nth odd number after n odd number
+n=4
+s=n+n
+v=2*s-1
+print(v)
+36) Write a program to find the sum of digits of N digit number (sum should be single digit)
+s=3
+l="579"
+t=[]
+if (len(l)==s):
+  for i in range(s):
+      t.append(int(l[i]))
+  print(sum(t))
+else:
+    print("invalid")
+ 
+12) Python Program to create a list of all numbers in a range which are perfect squares and the sum of the 
+digits of the number is less than 10.
+import math
+a=int(input())
+b=int(input())
+t=[]
+for i in range (a,b):
+     sqr=math.sqrt(i)
+     if sqr-math.floor(sqr)==0:
+         c=str(i)
+         for j in range(len(c)):
+           t.append(int(c[j]))
+         if(sum(t)<10):
+           print(i)
+         t=[]
+28)binary to decimal and octal
+   binary="1111"
+   decimal=int(binary,2)
+   octal=oct(decimal)
+   print(decimal)
+   print(octal)
+26) pattern number
+    n=4
+    for i in range(n):
+      for j in range(i+1):
+         print(i+1,end=" ")
+      print()
+24)Python Program to Create a List of Tuples with the First Element as the Number and Second Element 
+as the Square of the Number
+t=[]
+a=45
+b=49
+for i in range(a,b+1):
+  s=(a,a*a)
+  t.append(s)
+print(t)
+ 23) Write a program to print consonants and 15:22 29-07-2023wels separately in the given word 
+str=input()
+vow="aeiouAEIOU"
+for i in str:
+  if i in vow:
+   print(i)
+ 19) Write a program to print the number of vowels and number of consonants in the given statement and 
+which is maximum?
+a=input()
+vow="aeiouAEIOU"
+V=0
+C=0
+for i in a:
+   if i in vow:
+     v=v+1
+   else:
+     c=c+1
+print(v)
+print(c)
+8) Write a program to print the given number is Perfect number or not?
+n=int(input())
+sum=0
+for i in range(1,n+1):
+    if (i%n==0):
+        sum+=i
+if(sum==n):
+    print("valid")
+else:
+    print("invalid")
+ 17) Python Program to Find the Nth Largest Number in a List
+m=list(map(int, input().split()))
+n=input()
+m.sort(reverse=True)
+if(n.isnumeric()):
+    n=int(n)
+    if(n>0):
+        print(m[n])
+15) Find the number of factors for the given number and print the 1st N factors of the given number.
+n=100
+t=[]
+b=4
+for i in range(1,n+1):
+   if(n%i==0):
+      t.append(i)
+print(len(t))
+ 
+print(t[0:b])
+14) Find the year of the given Anniversary is leap year or not. If leap year then print the next Anniversary, 
+if not leap year then print the previous Anniversary.
+ann= input("enter annivarsary date dd/mm/yyyy")
+year=int(ann[-4:])
+leap=0
+if(year%400==0 and year%100!=0):
+    leap=1
+else:
+    leap=0
+if(leap==1):
+    year=year+1
+    ann=ann[0:6]+str(year)
+    print("anniversary date",ann)
+else:
+    year=year-1
+    ann=ann[0:6]+str(year)
+    print("anniversary date",ann)
+ 40) Write a program to reverse an array
+l=list(map(int, input().split()))
+print(l[::-1])
+ 41) Write a program to find the given number is Harshad number or not . Note: Harshad number means an 
+integer that is divisible by the sum of its digits when written in that base
+a=input()
+t=[]
+c=int(a)
+for i in a:
+    t.append(int(i))
+if(c%sum(t)==0):
+    print("haresd")
+else:
+    print("not harsed")
+          
+
+ 44) Write a program to arrange the letters of the word alphabetically in Normal order and reverse order
+
+c="venu"
+k=sorted(c)
+print(k)
+print(k[::-1])
+ 47) Write a program to Print M multiples of N number
+m=6
+n=3
+for i in range(1,m+1):
+    print(i*n,end=" ")
+73) Write a program to print the first n perfect numbers. (Hint Perfect number means a positive integer 
+that is equal to the sum of its proper divisors)
+a= 5
+b = 7000
+c=0
+d=int(input('entet '))
+for N in range(a,b-1):
+    Sum = 0
+    for n in range(1, N):
+        if(N % n == 0):
+            Sum = Sum + n
+    if(Sum == N):
+      c+=1
+      if c<=d:
+        print(N)
+ 67) Find the Mth maximum number and Nth minimum number in an array and then find the sum of it, 
+difference of it and product of it.
+ M=list(map(int, input("enter a list :").split()))
+M.sort()
+g=len(M)
+a=int(input('a= '))
+b=int(input('b= '))
+print("min=",M[b-1])
+print('max=',M[g-a])
+65) Write a program to reverse a word using loop? (Not to use inbuilt functions)
+N=”sai”
+S=””
+For I in N:
+S=i+s
+Print(s)
+74) A Pythagorean triplet is a set of three integers a, b and c such that a2+ b2= c2. Given a limit, generate all Pythagorean Triples with values smaller than given limit?
+a=b=c=0
+m=2
+n=10
+while(c<n):
+   for i in  range(1,m):
+    a=m*m-i*i
+    b=2*m*i
+    c=m*m+i*i
+    if(c>n):
+       break
+    print(a,b,c)
+   m=m+1
+49) Find the LCM and GCD of n numbers?
+import math
+s=int(input("enter size:"))
+a=list(map(int, input().split()))
+l=len(a)
+if(s==l):
+   c=math.gcd(a[0],a[1])
+   d=(a[0]*a[1])//c
+   if(s==2):
+      print("gcd:",c)
+      print("lcm:",d)
+   elif(s>=3):
+      k=math.gcd(c,a[2])
+      m=math.gcd(a[2] ,d)
+      l=(d *a[2])//m
+      print("gcd:",k)
+      print("lcm:",l)
+   else:
+      print("invalid")
+else:
+   print("invalid")
+82)matrix addition?
+#!/usr/bin/python3
+m=int(input("Enter the row for matrix 1:"))
+n=int(input("Enter the coloumn for matrix 1:"))
+p=int(input("Enter the row for matrix 2:"))
+q=int(input("Enter the coloumn for matrix 2:"))
+if n!=p:
+    print("enter a valid order")
+else:
+    a=[]
+    for i in range(0,m):
+       a.append([])
+    for i in range(0,m):
+      for j in range(0,n):
+        a[i].append(j)
+        a[i][j]=0
+        a[i][j]=int(input('enter'))
+    print(a)
+    b=[]
+    for i in range(0,p):
+       b.append([])
+    for i in range(0,p):
+      for j in range(0,q):
+        b[i].append(j)
+        b[i][j]=0
+        b[i][j]=int(input('enter'))
+    print(b)
+    c=[]
+    for i in range(0,m):
+       c.append([])
+    for i in range(0,m):
+      for j in range(0,n):
+        c[i].append(j)
+        c[i][j]=0
+    for i in range(len(a)):
+      for j in range(len(b)):
+          c[i][j]=a[i][j]+b[i][j]
+    print(c)
+
+**)multiplication ?
+m=int(input("rows of matrix1:"))
+n=int(input("colums of matrix1:"))
+p=int(input("rows of matrix2:"))
+q=int(input("colums of matrix2:"))
+if(n!=p):
+   print("invalid")
+else:
+   a=[]
+   for i in range(0,m):
+      a.append([])
+   for i in range(0,m):
+      for j in range(0,n):
+         a[i].append(j)
+         a[i][j]=0
+         a[i][j]=int(input("Enter:"))
+   b=[]
+   for i in range(0,p):
+      b.append([])
+   for i in range(0,p):
+      for j in range(0,q):
+         b[i].append(j)
+         b[i][j]=0
+         b[i][j]=int(input("new"))
+   c=[]
+   for i in range(len(a)):
+      c.append([])
+   for i in range(len(a)):
+      for j in range(len(b)):
+         c[i].append(j)
+         c[i][j]=0
+         for k in range(len(b)):
+            c[i][j]+=a[i][k]*b[k][j]
+   print(c)
+hollow sqar?
+r=5
+for i in range(r):
+   for j in range(r-i):
+    print(" ",end=" ")
+   for j in range(2*i+1):
+      if(j==0 or j==2*i or i==r-1):
+         print("*",end=" ")
+      else:
+         print(" ",end=" ")
+   print()
